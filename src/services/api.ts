@@ -1,9 +1,5 @@
 import axios from 'axios';
-import type {
-  AxiosResponse,
-  InternalAxiosRequestConfig,
-  AxiosError
-} from 'axios';
+import type { AxiosResponse, InternalAxiosRequestConfig, AxiosError } from 'axios';
 import { push, paths } from '@router/routes';
 
 // Import our api url from env file
@@ -31,16 +27,16 @@ axiosInstance.interceptors.response.use(
     }
 
     switch (errorStatus) {
-        case 401:
-          // log out user, clear local storage and go to login page
-          // TODO: if you set cookies, clear them here
-          push(paths.login.path);
-          break;
-        case 403:
-          // go to previous page
-          history.back();
-          break;
-      }
+      case 401:
+        // log out user, clear local storage and go to login page
+        // TODO: if you set cookies, clear them here
+        push(paths.login.path);
+        break;
+      case 403:
+        // go to previous page
+        history.back();
+        break;
+    }
 
     return Promise.reject(error);
   }

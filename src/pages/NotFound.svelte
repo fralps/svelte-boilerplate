@@ -1,3 +1,5 @@
-<div class="h-screen flex-center-center">
-  <h1 class="h1">Not Found</h1>
-</div>
+<script lang="ts">
+  import { _ } from '@translations/i18n';
+</script>
+
+<h1 class="text-center">{$_('not_found')}</h1>
