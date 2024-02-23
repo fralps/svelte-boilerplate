@@ -1,0 +1,80 @@
+name: CI pipeline
+on:
+  push:
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  build:
+    name: 🚀 Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 🔧 Install modules
+        run: bun install
+
+      - name: ⚙️ Build app
+        run: bun run build
+
+  # linters:
+  #   name: 🔬 Linters
+  #   if: success()
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+
+  #     - uses: oven-sh/setup-bun@v1
+  #       with:
+  #         bun-version: latest
+
+  #     - name: 🔧 Install dependencies
+  #       run: bun install
+
+  #     - name: 🔬 Run ESLint
+  #       run: bun run lint
+
+  #     - name: 🎨 Run Stylelint
+  #       run: bun run stylelint
+
+  licenses:
+    name: ©️ Licenses
+    if: success()
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔧 Checkout code
+        uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 🔧 Install modules
+        run: bun install
+
+      - name: 🧪 Run licenses check
+        shell: bash
+        run: bash ".github/scripts/check-licenses.sh"
+
+  checks:
+    name: ⚙️ TS svelte-checks
+    if: success()
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 🔧 Install modules
+        run: bun install
+
+      - name: ✅ Run checks
+        run: bun run check
