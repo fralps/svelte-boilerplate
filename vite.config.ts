@@ -16,6 +16,8 @@ export default defineConfig({
       path: 'path-browserify',
       '@src': path.resolve('./src'),
       '@assets': path.resolve('./src/assets'),
+      '@router': path.resolve('./src/router'),
+      '@pages': path.resolve('./src/pages'),
       '@components': path.resolve('./src/components')
     }
   }
