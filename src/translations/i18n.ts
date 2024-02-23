@@ -1,6 +1,6 @@
 import { dictionary, locale, _, json, init, getLocaleFromNavigator } from 'svelte-i18n';
-const en = await import('@translations/locales/en.json', { with: { type: 'json' } });
-const fr = await import('@translations/locales/fr.json', { with: { type: 'json' } });
+import en from '@translations/locales/en.json' with { type: 'json' };
+import fr from '@translations/locales/fr.json' with { type: 'json' };
 
 const setupI18n = ({ withLocale: _locale } = { withLocale: 'fr' }) => {
   init({
