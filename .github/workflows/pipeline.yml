@@ -20,26 +20,26 @@ jobs:
       - name: ⚙️ Build app
         run: bun run build
 
-  # linters:
-  #   name: 🔬 Linters
-  #   if: success()
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
+  linters:
+    name: 🔬 Linters
+    if: success()
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-  #     - uses: oven-sh/setup-bun@v1
-  #       with:
-  #         bun-version: latest
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
-  #     - name: 🔧 Install dependencies
-  #       run: bun install
+      - name: 🔧 Install dependencies
+        run: bun install
 
-  #     - name: 🔬 Run ESLint
-  #       run: bun run lint
+      - name: 🔬 Run ESLint
+        run: bun run lint
 
-  #     - name: 🎨 Run Stylelint
-  #       run: bun run stylelint
+      - name: 🎨 Run Stylelint
+        run: bun run stylelint
 
   licenses:
     name: ©️ Licenses
