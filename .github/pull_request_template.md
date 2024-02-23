@@ -10,6 +10,6 @@
 
 - Add/delete/edit...
 
-## 📺 Comment tester
+## 📺 How to test
 
 - Go to ...
