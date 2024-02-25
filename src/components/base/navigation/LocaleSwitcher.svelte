@@ -2,7 +2,7 @@
   import { dictionary, setupI18n, locale } from '@translations/i18n';
   import { currentLocale } from '@store/navigation/locale';
 
-  let value: string | null = $locale
+  let value: string | null = $locale;
 
   const availablesLocales: string[] = Object.keys($dictionary);
 

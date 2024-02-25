@@ -11,7 +11,7 @@
 
   // Get the current locale from the store or from i18n default locale
   const setLocale = (): void => {
-    $currentLocale === null ?  setupI18n() : setupI18n({ withLocale: $currentLocale });
+    $currentLocale === null ? setupI18n() : setupI18n({ withLocale: $currentLocale });
   };
 
   // Routes interceptor function that redirects to homepage
