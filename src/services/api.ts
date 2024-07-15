@@ -1,6 +1,6 @@
+import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import { paths, push } from '@router/routes';
 import axios from 'axios';
-import type { AxiosResponse, InternalAxiosRequestConfig, AxiosError } from 'axios';
-import { push, paths } from '@router/routes';
 
 // Import our api url from env file
 const baseURL: string = import.meta.env.VITE_APP_API_BASE_URL as string;
@@ -23,7 +23,7 @@ axiosInstance.interceptors.response.use(
     const errorStatus: number | undefined = error?.response?.status;
 
     if (error.response) {
-      console.log(error.response.status);
+      console.error(error.response.status);
     }
 
     switch (errorStatus) {

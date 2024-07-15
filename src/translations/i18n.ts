@@ -1,4 +1,4 @@
-import { dictionary, locale, _, json, init, getLocaleFromNavigator } from 'svelte-i18n';
+import { _, dictionary, getLocaleFromNavigator, init, json, locale } from 'svelte-i18n';
 import en from '@translations/locales/en.json' with { type: 'json' };
 import fr from '@translations/locales/fr.json' with { type: 'json' };
 

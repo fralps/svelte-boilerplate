@@ -1,10 +1,10 @@
-import { derived } from 'svelte/store';
-import dayjs from 'dayjs';
-import localeData from 'dayjs/plugin/localeData';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
 import 'dayjs/locale/fr';
 import 'dayjs/locale/en';
+import dayjs from 'dayjs';
+import { derived } from 'svelte/store';
 import { locale } from '@translations/i18n';
+import localeData from 'dayjs/plugin/localeData';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 
 dayjs.extend(localeData);
 dayjs.extend(localizedFormat);
