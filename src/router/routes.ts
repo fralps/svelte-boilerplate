@@ -1,4 +1,4 @@
-import { push, location, link } from 'svelte-spa-router';
+import { link, location, push } from 'svelte-spa-router';
 
 // App routes and paths
 import { pages } from '@router/app-routes';

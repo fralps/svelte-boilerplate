@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Router from 'svelte-spa-router';
-  import { routes, paths, push } from '@router/routes';
-  import { setupI18n } from '@translations/i18n';
   import { currentLocale } from '@store/navigation/locale';
+  import { paths, push, routes } from '@router/routes';
+  import { setupI18n } from '@translations/i18n';
+  import Router from 'svelte-spa-router';
 
   onMount(() => {
     setLocale();

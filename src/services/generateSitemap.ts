@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Bun from 'bun';
 import { paths } from '../router/paths';
 import xml from 'xml';
@@ -26,7 +25,7 @@ const productionUrl: string = Bun.env.VITE_APP_PRODUCTION_URL;
 
 // Map over the keys in the routes object to create an array of sitemap items
 const sitemapItems = Object.keys(routes).map(
-  (key: string): { url: ({ loc: string } | { lastmod: string } | { changefreq: any } | { priority: number })[] } => ({
+  (key: string): { url: ({ changefreq: any } | { lastmod: string } | { loc: string } | { priority: number })[] } => ({
     url: [
       { loc: `${productionUrl}${routes[key].path}` },
       { lastmod: currentDate },
@@ -39,8 +38,8 @@ const sitemapItems = Object.keys(routes).map(
 // Create the sitemap object structure
 const sitemapObject: {
   urlset: (
-    | { url: ({ loc: string } | { lastmod: string } | { changefreq: any } | { priority: number })[] }
     | { _attr: { xmlns: string; 'xmlns:xsi': string; 'xsi:schemaLocation': string } }
+    | { url: ({ changefreq: any } | { lastmod: string } | { loc: string } | { priority: number })[] }
   )[];
 } = {
   urlset: [

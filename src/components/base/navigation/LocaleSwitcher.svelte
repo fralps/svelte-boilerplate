@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { dictionary, setupI18n, locale } from '@translations/i18n';
+  import { dictionary, locale, setupI18n } from '@translations/i18n';
   import { currentLocale } from '@store/navigation/locale';
 
   let value: string | null = $locale;
@@ -13,7 +13,7 @@
   };
 </script>
 
-<select {value} on:change|preventDefault={handleLocaleChange} class="px-2 py-1 border rounded-full cursor-pointer">
+<select class="px-2 py-1 border rounded-full cursor-pointer" {value} on:change|preventDefault={handleLocaleChange}>
   {#each availablesLocales as locale}
     <option value={locale}>{locale}</option>
   {/each}
