@@ -20,6 +20,7 @@ export default [
       'no-cond-assign': ['error', 'always'],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/sort-type-constituents': 'error',
+      '@typescript-eslint/no-unused-expressions': 'off',
       'sort-imports': [
         'error',
         {

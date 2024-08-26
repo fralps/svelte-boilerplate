@@ -5,7 +5,7 @@
   import { setupI18n } from '@translations/i18n';
   import Router from 'svelte-spa-router';
 
-  onMount(() => {
+  onMount((): void => {
     setLocale();
   });
 
@@ -15,7 +15,7 @@
   };
 
   // Routes interceptor function that redirects to homepage
-  const routesConditionsFailed = () => {
+  const routesConditionsFailed = (): void => {
     push(paths.home.path);
   };
 </script>
