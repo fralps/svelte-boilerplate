@@ -1,7 +1,7 @@
-import path from 'path-browserify';
-import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import path from 'path-browserify';
 import { sveltePreprocess } from 'svelte-preprocess';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
