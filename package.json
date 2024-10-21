@@ -15,7 +15,7 @@
     "generate:sitemap": "bun run ./src/services/generateSitemap.ts"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tsconfig/svelte": "^5.0.4",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
@@ -38,7 +38,7 @@
     "stylelint-config-sass-guidelines": "^12.0.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-scss": "^6.5.1",
-    "svelte": "^4.2.19",
+    "svelte": "^5.0.3",
     "svelte-check": "^4.0.0",
     "svelte-eslint-parser": "^0.43.0",
     "svelte-preprocess": "^6.0.2",
