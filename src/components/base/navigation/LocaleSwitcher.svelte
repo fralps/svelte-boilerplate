@@ -14,7 +14,7 @@
 </script>
 
 <select class="px-2 py-1 border rounded-full cursor-pointer" {value} on:change|preventDefault={handleLocaleChange}>
-  {#each availablesLocales as locale}
+  {#each availablesLocales as locale (locale)}
     <option value={locale}>{locale}</option>
   {/each}
 </select>
