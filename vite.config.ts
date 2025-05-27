@@ -2,13 +2,15 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import path from 'path-browserify';
 import { sveltePreprocess } from 'svelte-preprocess';
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     svelte({
       preprocess: sveltePreprocess()
-    })
+    }),
+    tailwindcss()
   ],
   resolve: {
     dedupe: ['svelte'],
@@ -22,6 +24,7 @@ export default defineConfig({
       '@translations': path.resolve('./src/translations'),
       '@pages': path.resolve('./src/pages'),
       '@components': path.resolve('./src/components')
-    }
+    },
+    extensions: ['*', '.js', '.ts', '.svelte', '.css']
   }
 });
