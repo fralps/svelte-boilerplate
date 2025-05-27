@@ -1,18 +1,14 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-sass-guidelines'],
-  overrides: [
-    {
-      files: ['**/*.scss'],
-      customSyntax: 'postcss-scss'
-    }
-  ],
-  customSyntax: 'postcss-html',
-  plugins: ['stylelint-scss'],
+  extends: ['stylelint-config-standard'],
   ignoreFiles: ['**/node_modules/**/*', '**/vendor/**/*', '**/build/**/*'],
   rules: {
-    'import-notation': null,
-    'function-no-unknown': null,
-    'no-invalid-position-at-import-rule': null,
-    'scss/at-rule-no-unknown': null
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen', 'layer']
+      }
+    ],
+    'no-descending-specificity': null,
+    'import-notation': 'string'
   }
 };
