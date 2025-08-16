@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['stylelint-config-standard'],
-  ignoreFiles: ['**/node_modules/**/*', '**/vendor/**/*', '**/build/**/*'],
+  extends: ['stylelint-config-recommended'],
+  ignoreFiles: ['**/node_modules/**/*', '**/vendor/**/*', '**/build/**/*', 'src/assets/styles/app.css'],
   rules: {
     'at-rule-no-unknown': [
       true,
