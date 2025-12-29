@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /dist/
-Sitemap: https://site-url/sitemap.xml
