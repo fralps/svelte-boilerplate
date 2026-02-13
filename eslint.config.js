@@ -1,12 +1,13 @@
 import eslint from '@eslint/js';
 import pluginImport from 'eslint-plugin-import';
+import { defineConfig } from 'eslint/config';
 import svelteEslint from 'eslint-plugin-svelte';
 import eslintConfigPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import svelteParser from 'svelte-eslint-parser';
 import tsEslint from 'typescript-eslint';
 
-export default [
+export default defineConfig([
   eslint.configs.recommended,
   ...tsEslint.configs.recommended,
   ...svelteEslint.configs['flat/recommended'],
@@ -64,4 +65,4 @@ export default [
   {
     ignores: ['**/node_modules/', '**/dist/', '*.config.cjs']
   }
-];
+]);
