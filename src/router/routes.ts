@@ -1,4 +1,4 @@
-import { link, location, push } from 'svelte-spa-router';
+import { link, push } from 'svelte-spa-router';
 
 // App routes and paths
 import { pages } from '@router/app-routes';
@@ -8,4 +8,4 @@ const routes = {
   ...pages
 };
 
-export { routes, push, location, paths, link };
+export { routes, push, paths, link };
