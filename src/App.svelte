@@ -21,5 +21,5 @@
 </script>
 
 <main class="min-h-screen">
-  <Router {routes} on:conditionsFailed={routesConditionsFailed} />
+  <Router onConditionsFailed={routesConditionsFailed} {routes} />
 </main>
