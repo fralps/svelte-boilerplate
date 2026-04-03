@@ -15,7 +15,7 @@
     "generate:sitemap": "bun run ./src/services/generateSitemap.ts"
   },
   "devDependencies": {
-    "@types/node": "^24.9.1",
+    "@types/node": "^25.5.0",
     "@eslint/js": "^10.0.1",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@tsconfig/svelte": "^5.0.7",
