@@ -30,7 +30,7 @@
     "lodash": "^4.17.23",
     "path-browserify": "^1.0.1",
     "prettier": "^3.8.1",
-    "prettier-plugin-svelte": "^3.4.1",
+    "prettier-plugin-svelte": "^4.0.1",
     "stylelint": "^17.2.0",
     "stylelint-config-recommended": "^18.0.0",
     "svelte": "^5.50.3",
